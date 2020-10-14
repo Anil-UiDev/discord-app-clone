@@ -4,10 +4,19 @@
   flex: 0.75;
   background: #363a3f;
   height: 100vh;
+  position: relative;
 }
 
-.chat__messages{
+.chat__messages::-webkit-scrollbar {
+  display: none;
+}
+
+.chat__messages {
   flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .chat__input {
